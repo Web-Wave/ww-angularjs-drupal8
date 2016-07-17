@@ -1,0 +1,14 @@
+{
+  "name": "drupal/ww_angularjs_drupal8",
+  "type": "drupal-module",
+  "description": "Display a name search page.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/ww_angularjs_drupal8",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/ww_angularjs_drupal8",
+    "source": "http://cgit.drupalcode.org/ww_angularjs_drupal8"
+  },
+  "require": { }
+}

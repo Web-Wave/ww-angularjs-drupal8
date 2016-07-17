@@ -1,0 +1,35 @@
+<section id="name_search" ng-app="app_ww" ng-controller="ctrl_ww">
+  <div class="container">
+      <form class="form" name="searchForm" enctype="multipart/form-data" ng-submit="submitWW()" novalidate>
+        <div class="form-left">
+            <h1>{{ title_page }}</h1>
+            <input list="names_list" type="text" placeholder="{{ placeholder }}" name="name" id="name" ng-model="search.name">
+            <datalist id="names_list">
+              {% for name in names %}
+                <option value="{{ name.title }}">
+              {% endfor %}
+            </datalist>
+        </div>
+        <div class="form-right">
+            <input type="submit" value="{{ submit }}">
+        </div>
+      </form>
+      <div id="error" style="display: none;">{{ error }}</div>
+  </div>
+  <div id="popup-name" style="display: none;">
+    <div class="card-wrapper clearfix">
+      <header class="card-head">
+        <h1>{{ card_title }}</h1>
+        <h3>{{ card_subtitle }}</h3>
+      </header>
+      <section class="card-content clearfix">
+        <div class="card-content-top">
+          <h1 ng-bind="title"></h1>
+        </div>
+        <div class="card-boxes-outer" ng-bind-html="images"></div>
+        <div class="dialog" ng-bind="content"></div>
+      </section>
+      <footer class="card-footer"></footer>
+    </div>
+  </div>
+</section>

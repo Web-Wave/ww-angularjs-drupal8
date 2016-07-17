@@ -1,0 +1,6 @@
+name: WW AngularJS Drupal 8
+type: module
+description: Display a name search page.
+core: 8.x
+package: Web-Wave
+version: '8.x-0.2'

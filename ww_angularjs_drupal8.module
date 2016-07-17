@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Contains ww_angularjs_drupal8.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ww_angularjs_drupal8_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.ww_angularjs_drupal8':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Display a name search page.') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ww_angularjs_drupal8_theme($existing, $type, $theme, $path) {
+  return array(
+    'block_ww_angularjs_drupal8_twig' => array(
+      'variables' => array(
+        'title_page' => NULL,
+        'names' => NULL,
+        'card_title' => NULL,
+        'card_subtitle' => NULL,
+        'placeholder' => NULL,
+        'submit' => NULL,
+        'error' => NULL,
+      ),
+      'template'  => 'block-ww-angularjs-drupal8',
+    ),
+  );
+}
